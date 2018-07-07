@@ -1,0 +1,290 @@
+import java.awt.*;
+import java.awt.event.*;
+import java.sql.*;
+
+public class databasecon
+{
+ Frame f;
+Panel p;
+Label l1,l2,l3,l4,l5,l6,l7,l8,l9,l10,l11,lmsg;
+TextField t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11;
+Choice ch;
+Button b1,b2,b3,b4,b5;
+GridBagLayout gbl;
+GridBagConstraints gbc;
+public databasecon()
+{
+f=new Frame("Details");
+p=new Panel();
+
+l1=new Label("RollNo");
+l2=new Label("Name");
+l3=new Label("Age");
+l4=new Label("Course");
+l5=new Label("Fee");
+l6=new Label("EnterRecord No");
+l7=new Label("RollNo");
+l8=new Label("Name");
+l9=new Label("Age");
+l10=new Label("course");
+l11=new Label("Fee");
+lmsg=new Label("**                   **");
+
+l1=new Label("15");
+l2=new Label("12");
+l3=new Label("4");
+l4=new Label("15");
+l5=new Label("10");
+l6=new Label("8");
+l6=new Label("#");
+l7=new Label("15");
+l8=new Label("12");
+l9=new Label("4");
+l10=new Label("15");
+l11=new Label("10");
+
+
+b1=new Button("NewRecord");
+
+b2=new Button("Save");
+
+b3=new Button("Delete");
+
+b4=new Button("Retrive");
+
+b5=new Button("Modify");
+
+gbl=new GridBagLayout();
+gbc=new GridBagConstraints();
+f.add(p);
+p.setLayout(gbl);
+gbc.anchor=GridBagConstraints.NORTHWEST;
+gbc.gridx=1;
+gbc.gridy=1;
+gbl.setConstraints(l1,gbc);
+p.add(l1);
+
+
+gbc.gridx=4;
+gbc.gridy=1;
+gbl.setConstraints(t1,gbc);
+p.add(t1);
+
+gbc.gridx=1;
+gbc.gridy=3;
+gbl.setConstraints(l2,gbc);
+p.add(l2);
+
+
+gbc.gridx=4;
+gbc.gridy=3;
+gbl.setConstraints(t2,gbc);
+p.add(t2);
+
+
+
+
+gbc.gridx=1;
+gbc.gridy=5;
+gbl.setConstraints(l3,gbc);
+p.add(l3);
+
+
+
+gbc.gridx=4;
+gbc.gridy=5;
+gbl.setConstraints(t3,gbc);
+p.add(t3);
+
+
+
+gbc.gridx=1;
+gbc.gridy=7;
+gbl.setConstraints(l4,gbc);
+p.add(l4);
+
+
+
+gbc.gridx=4;
+gbc.gridy=7;
+gbl.setConstraints(t4,gbc);
+p.add(t4);
+
+
+
+gbc.gridx=1;
+gbc.gridy=9;
+gbl.setConstraints(l5,gbc);
+p.add(l5);
+
+
+
+gbc.gridx=4;
+gbc.gridy=9;
+gbl.setConstraints(t5,gbc);
+p.add(t5);
+
+
+
+gbc.gridx=1;
+gbc.gridy=13;
+gbl.setConstraints(b1,gbc);
+
+Meridatabasecon rd=new Meridatabasecon();
+b1.addActionListener(rd);
+p.add(b1); 
+
+
+gbc.gridx=3;
+gbc.gridy=13;
+gbl.setConstraints(b2,gbc);
+
+Meridatabasecon ve=new Meridatabasecon();
+b2.addActionListener(ve);
+p.add(b2);
+
+
+
+gbc.gridx=1;
+gbc.gridy=15;
+gbl.setConstraints(l6,gbc);
+
+p.add(l6);
+
+
+
+gbc.gridx=3;
+gbc.gridy=15;
+gbl.setConstraints(t6,gbc);
+p.add(t6);
+
+
+
+gbc.gridx=5;
+gbc.gridy=15;
+gbl.setConstraints(b3,gbc);
+
+Meridatabasecon te=new Meridatabasecon();
+b1.addActionListener(te);
+p.add(b3);
+
+
+
+gbc.gridx=7;
+gbc.gridy=15;
+gbl.setConstraints(b4,gbc);
+
+Meridatabasecon eve=new Meridatabasecon();
+b1.addActionListener(eve);
+p.add(b4);
+
+
+
+gbc.gridx=9;
+gbc.gridy=15;
+gbl.setConstraints(b5,gbc);
+
+Meridatabasecon fy=new Meridatabasecon();
+b1.addActionListener(fy);
+p.add(b5);
+
+
+
+gbc.gridx=1;
+gbc.gridy=17;
+gbl.setConstraints(l7,gbc);
+p.add(l7);
+
+
+
+gbc.gridx=3;
+gbc.gridy=17;
+gbl.setConstraints(l8,gbc);
+p.add(l8);
+
+
+gbc.gridx=5;
+gbc.gridy=17;
+gbl.setConstraints(l9,gbc);
+p.add(l9);
+
+
+
+gbc.gridx=7;
+gbc.gridy=17;
+gbl.setConstraints(l10,gbc);
+p.add(l10);
+
+
+
+gbc.gridx=1;
+gbc.gridy=19;
+gbl.setConstraints(t7,gbc);
+p.add(t7);
+
+
+
+
+gbc.gridx=3;
+gbc.gridy=19;
+gbl.setConstraints(t8,gbc);
+p.add(t8);
+
+
+
+gbc.gridx=5;
+gbc.gridy=19;
+gbl.setConstraints(t9,gbc);
+p.add(t9);
+
+
+
+gbc.gridx=7;
+gbc.gridy=19;
+gbl.setConstraints(t10,gbc);
+p.add(t10);
+
+
+
+gbc.gridx=1;
+gbc.gridy=1;
+gbl.setConstraints(l1,gbc);
+p.add(l1);
+
+
+
+gbc.gridx=9;
+gbc.gridy=19;
+gbl.setConstraints(t11,gbc);
+p.add(t11);
+
+
+
+gbc.gridx=1;
+gbc.gridy=1;
+gbl.setConstraints(l1,gbc);
+p.add(l1);
+
+
+
+gbc.gridx=1;
+gbc.gridy=21;
+gbl.setConstraints(lmsg,gbc);
+p.add(lmsg);
+
+
+f.setVisible(true);
+f.setSize(400,400);
+}
+public  static void main(String arg[])
+{
+databasecon dc=new databasecon();
+}
+}
+
+
+
+
+
+
+
